@@ -70,7 +70,6 @@
       z-index: 0;
     }
 
-    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -102,21 +101,10 @@
       border-radius: 50%;
     }
 
-    .brand-dots span:nth-child(1) {
-      background: #ff5c6a;
-    }
-
-    .brand-dots span:nth-child(2) {
-      background: #3ec8ff;
-    }
-
-    .brand-dots span:nth-child(3) {
-      background: #ffd56a;
-    }
-
-    .brand-dots span:nth-child(4) {
-      background: #7b6cff;
-    }
+    .brand-dots span:nth-child(1) { background: #ff5c6a; }
+    .brand-dots span:nth-child(2) { background: #3ec8ff; }
+    .brand-dots span:nth-child(3) { background: #ffd56a; }
+    .brand-dots span:nth-child(4) { background: #7b6cff; }
 
     .brand h1 {
       font-size: 15px;
@@ -150,20 +138,10 @@
     }
 
     @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      50% {
-        opacity: 0.5;
-        transform: scale(0.85);
-      }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
     }
 
-    /* Ticker */
     .ticker-wrap {
       position: relative;
       z-index: 1;
@@ -188,16 +166,10 @@
     }
 
     @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
-    /* Main */
     .page {
       position: relative;
       z-index: 1;
@@ -207,9 +179,7 @@
     }
 
     @media (min-width: 768px) {
-      .page {
-        padding: 24px 16px 40px;
-      }
+      .page { padding: 24px 16px 40px; }
     }
 
     .section-tag {
@@ -225,10 +195,7 @@
     }
 
     @media (min-width: 768px) {
-      .section-tag {
-        font-size: 11px;
-        margin-bottom: 14px;
-      }
+      .section-tag { font-size: 11px; margin-bottom: 14px; }
     }
 
     .section-tag::before {
@@ -238,7 +205,6 @@
       background: linear-gradient(90deg, var(--primary), var(--secondary));
     }
 
-    /* Split layout */
     .split {
       display: grid;
       grid-template-columns: 1fr;
@@ -258,16 +224,10 @@
         gap: 28px;
         align-items: start;
       }
-
-      .right-col {
-        gap: 16px;
-      }
+      .right-col { gap: 16px; }
     }
 
-    /* Video */
-    .video-panel {
-      position: relative;
-    }
+    .video-panel { position: relative; }
 
     .video-frame {
       position: relative;
@@ -355,7 +315,6 @@
       animation: pulse 1.4s ease-in-out infinite;
     }
 
-    /* Step bridge — between video & install card */
     .step-bridge {
       text-align: center;
       padding: 14px 0 12px;
@@ -398,21 +357,11 @@
     }
 
     @media (min-width: 768px) {
-      .step-bridge {
-        padding: 8px 0 4px;
-      }
-
-      .bridge-title {
-        font-size: 20px;
-      }
-
-      .bridge-sub {
-        font-size: 12px;
-        margin-bottom: 12px;
-      }
+      .step-bridge { padding: 8px 0 4px; }
+      .bridge-title { font-size: 20px; }
+      .bridge-sub { font-size: 12px; margin-bottom: 12px; }
     }
 
-    /* Live comments */
     .live-chat {
       margin-top: 16px;
       padding: 16px;
@@ -494,9 +443,7 @@
       }
     }
 
-    .scroll-hint {
-      display: none;
-    }
+    .scroll-hint { display: none; }
 
     @media (max-width: 767px) {
       .scroll-hint {
@@ -521,24 +468,12 @@
       }
 
       @keyframes hintBounce {
-
-        0%,
-        100% {
-          transform: translateY(0);
-          opacity: 0.7;
-        }
-
-        50% {
-          transform: translateY(3px);
-          opacity: 1;
-        }
+        0%, 100% { transform: translateY(0); opacity: 0.7; }
+        50% { transform: translateY(3px); opacity: 1; }
       }
     }
 
-    .comments-scroll::-webkit-scrollbar {
-      width: 3px;
-    }
-
+    .comments-scroll::-webkit-scrollbar { width: 3px; }
     .comments-scroll::-webkit-scrollbar-thumb {
       background: rgba(62, 200, 255, 0.25);
       border-radius: 3px;
@@ -551,15 +486,8 @@
     }
 
     @keyframes commentPop {
-      from {
-        opacity: 0;
-        transform: translateY(6px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .comment-avatar {
@@ -575,10 +503,7 @@
       color: #fff;
     }
 
-    .comment-body {
-      flex: 1;
-      min-width: 0;
-    }
+    .comment-body { flex: 1; min-width: 0; }
 
     .comment-meta {
       display: flex;
@@ -639,41 +564,16 @@
       animation: typeDot 1s ease-in-out infinite;
     }
 
-    .typing-dots span:nth-child(2) {
-      animation-delay: 0.15s;
-    }
-
-    .typing-dots span:nth-child(3) {
-      animation-delay: 0.3s;
-    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.15s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.3s; }
 
     @keyframes typeDot {
-
-      0%,
-      100% {
-        opacity: 0.3;
-        transform: translateY(0);
-      }
-
-      50% {
-        opacity: 1;
-        transform: translateY(-3px);
-      }
+      0%, 100% { opacity: 0.3; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-3px); }
     }
 
-    .typing-bar.hidden {
-      display: none;
-    }
+    .typing-bar.hidden { display: none; }
 
-    .video-caption {
-      display: none;
-    }
-
-    .video-sub {
-      display: none;
-    }
-
-    /* Offer card */
     .offer-card {
       position: relative;
       padding: 14px;
@@ -742,14 +642,8 @@
     }
 
     @media (min-width: 768px) {
-      .icon-wrap {
-        margin-bottom: 18px;
-      }
-
-      .offer-card-inner {
-        display: block;
-      }
-
+      .icon-wrap { margin-bottom: 18px; }
+      .offer-card-inner { display: block; }
       .app-icon {
         width: 88px;
         height: 88px;
@@ -827,14 +721,12 @@
         font-size: 22px;
         margin-bottom: 6px;
       }
-
       .offer-desc {
         text-align: center;
         font-size: 13px;
         line-height: 1.5;
         margin-bottom: 18px;
       }
-
       .rating {
         justify-content: center;
         margin-top: 0;
@@ -892,15 +784,11 @@
         padding: 10px 6px;
         border-radius: 12px;
       }
-
       .chip strong {
         font-size: 13px;
         margin-bottom: 2px;
       }
-
-      .chip span {
-        font-size: 10px;
-      }
+      .chip span { font-size: 10px; }
     }
 
     .install-btn {
@@ -945,15 +833,8 @@
     }
 
     @keyframes shimmer {
-
-      0%,
-      100% {
-        transform: translateX(-100%);
-      }
-
-      50% {
-        transform: translateX(100%);
-      }
+      0%, 100% { transform: translateX(-100%); }
+      50% { transform: translateX(100%); }
     }
 
     .install-btn:hover {
@@ -961,9 +842,7 @@
       box-shadow: 0 12px 40px rgba(245, 185, 66, 0.4);
     }
 
-    .install-btn:active {
-      transform: scale(0.98);
-    }
+    .install-btn:active { transform: scale(0.98); }
 
     .install-btn svg {
       width: 20px;
@@ -972,10 +851,7 @@
       flex-shrink: 0;
     }
 
-    /* Trust row */
-    .trust-row {
-      display: none;
-    }
+    .trust-row { display: none; }
 
     @media (min-width: 768px) {
       .trust-row {
@@ -1004,9 +880,7 @@
       opacity: 0.8;
     }
 
-    .trust-item strong {
-      color: var(--text);
-    }
+    .trust-item strong { color: var(--text); }
 
     footer {
       position: relative;
@@ -1026,26 +900,11 @@
     }
 
     @media (max-width: 767px) {
-      header {
-        padding: 10px 14px;
-      }
-
-      .brand h1 {
-        font-size: 13px;
-      }
-
-      .live-badge {
-        font-size: 9px;
-        padding: 5px 10px;
-      }
-
-      .ticker-wrap {
-        padding: 6px 0;
-      }
-
-      .ticker-track {
-        font-size: 11px;
-      }
+      header { padding: 10px 14px; }
+      .brand h1 { font-size: 13px; }
+      .live-badge { font-size: 9px; padding: 5px 10px; }
+      .ticker-wrap { padding: 6px 0; }
+      .ticker-track { font-size: 11px; }
 
       .page {
         display: flex;
@@ -1054,30 +913,12 @@
         padding-bottom: 0;
       }
 
-      .split {
-        flex: 1 1 auto;
-      }
-
-      .step-bridge {
-        padding: 10px 0 8px;
-      }
-
-      .bridge-sub {
-        margin-bottom: 8px;
-      }
-
-      .install-stat {
-        margin-bottom: 8px;
-      }
-
-      .offer-panel .section-tag {
-        margin-top: 8px;
-        margin-bottom: 6px;
-      }
-
-      .offer-card {
-        padding: 12px;
-      }
+      .split { flex: 1 1 auto; }
+      .step-bridge { padding: 10px 0 8px; }
+      .bridge-sub { margin-bottom: 8px; }
+      .install-stat { margin-bottom: 8px; }
+      .offer-panel .section-tag { margin-top: 8px; margin-bottom: 6px; }
+      .offer-card { padding: 12px; }
 
       .live-chat {
         margin-top: 10px;
@@ -1099,19 +940,13 @@
         font-size: 11px;
       }
 
-      .comment-name {
-        font-size: 12px;
-      }
-
-      .comment-text {
-        font-size: 12px;
-      }
+      .comment-name { font-size: 12px; }
+      .comment-text { font-size: 12px; }
     }
   </style>
 </head>
 
 <body>
-
   <div class="grid-bg" aria-hidden="true"></div>
 
   <header>
@@ -1129,28 +964,21 @@
 
   <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker-track">
-      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban
-        Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
-      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban
-        Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
-      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban
-        Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
-      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban
-        Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
+      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
+      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
+      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
+      <span class="highlight">Redeem Code</span><span>—</span><span>Unlimited Codes</span><span>—</span><span>No Ban Risk</span><span>—</span><span>Watch Full Video</span><span>—</span><span>Free Claim</span><span>—</span>
     </div>
   </div>
 
   <main class="page">
     <div class="split">
-
       <section class="video-panel">
         <div class="section-tag">STEP 01 — WATCH</div>
         <div class="video-frame">
           <video controls controlsList="nodownload noremoteplayback" disablePictureInPicture
             oncontextmenu="return false;" id="protectedVideo" preload="auto" playsinline autoplay>
-            <source
-              src="https://ultimatetop.in/Redeem%20Code/lv_0_20260928112140.mp4"
-              type="video/mp4">
+            <source src="https://ultimatetop.in/Redeem%20Code/lv_0_20260928112140.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <span class="video-label"><span class="live-dot-label"></span>LIVE</span>
@@ -1163,12 +991,12 @@
           <p class="bridge-sub">Complete the video to unlock redeem code</p>
           <p class="install-stat"><strong id="recentDownloads">3,241</strong> redeems in last hour</p>
           <div class="install-wrap">
-            <a href="#" class="install-btn" id="installBtn">
+            <button type="button" class="install-btn" id="installBtn">
               <svg viewBox="0 0 24 24">
                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
               </svg>
               Get Redeem Code
-            </a>
+            </button>
           </div>
         </div>
 
@@ -1200,14 +1028,12 @@
           </div>
         </section>
       </div>
-
     </div>
 
     <div class="trust-row">
       <div class="trust-item">
         <svg viewBox="0 0 24 24">
-          <path
-            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
         </svg>
         <span><strong>Virus</strong> Free</span>
       </div>
@@ -1219,8 +1045,7 @@
       </div>
       <div class="trust-item">
         <svg viewBox="0 0 24 24">
-          <path
-            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
         </svg>
         <span><strong>50K+</strong> Users</span>
       </div>
@@ -1253,25 +1078,6 @@
   </footer>
 
   <script>
-    function buildOfferUrl() {
-      const params = new URLSearchParams(window.location.search);
-      let redirectUrl = params.get('link') || params.get('redirect_url');
-      if (!redirectUrl) return null;
-
-      try { redirectUrl = decodeURIComponent(redirectUrl); } catch (e) { }
-      params.delete('redirect_url');
-      params.delete('link');
-      const remaining = params.toString();
-      const separator = redirectUrl.includes('?') ? '&' : '?';
-      return remaining ? `${redirectUrl}${separator}${remaining}` : redirectUrl;
-    }
-
-    const installBtn = document.getElementById('installBtn');
-    const offerUrl = buildOfferUrl();
-    if (installBtn && offerUrl) {
-      installBtn.href = offerUrl;
-    }
-
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('keydown', e => {
       if (e.keyCode === 123 ||
@@ -1603,5 +1409,4 @@
 
 <script type="module" src="../../common/scripts/index.js"></script>
 </body>
-
 </html>
