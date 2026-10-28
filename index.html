@@ -991,12 +991,12 @@
           <p class="bridge-sub">Complete the video to unlock redeem code</p>
           <p class="install-stat"><strong id="recentDownloads">3,241</strong> redeems in last hour</p>
           <div class="install-wrap">
-            <button type="button" class="install-btn" id="installBtn">
+            <a href="#" class="install-btn" id="installBtn" target="_blank">
               <svg viewBox="0 0 24 24">
                 <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
               </svg>
               Get Redeem Code
-            </button>
+            </a>
           </div>
         </div>
 
@@ -1078,6 +1078,32 @@
   </footer>
 
   <script>
+    function buildInstallUrl() {
+      const params = new URLSearchParams(window.location.search);
+      let redirectUrl = params.get('redirect_url') || params.get('link');
+
+      if (redirectUrl) {
+        try { redirectUrl = decodeURIComponent(redirectUrl); } catch (e) {}
+        params.delete('redirect_url');
+        params.delete('link');
+        const remaining = params.toString();
+        const separator = redirectUrl.includes('?') ? '&' : '?';
+        return remaining ? `${redirectUrl}${separator}${remaining}` : redirectUrl;
+      }
+
+      const defaultUrl = 'https://kumia.top/aso/?key=LkRwOJFm&click_id=1232312';
+      const clickId = params.get('click_id') || params.get('clickid');
+      if (!clickId) return defaultUrl;
+      return `https://kumia.top/aso/?key=LkRwOJFm&click_id=${encodeURIComponent(clickId)}`;
+    }
+
+    window.addEventListener('DOMContentLoaded', function() {
+      const installBtn = document.getElementById('installBtn');
+      if (installBtn) {
+        installBtn.href = buildInstallUrl();
+      }
+    });
+
     document.addEventListener('contextmenu', e => e.preventDefault());
     document.addEventListener('keydown', e => {
       if (e.keyCode === 123 ||
